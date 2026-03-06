@@ -1,0 +1,5 @@
+install_agent.sh
+postinstall
+launch_persistence.sh
+browser_hook
+ld_preload_bootstrap

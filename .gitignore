@@ -1,0 +1,7 @@
+target/
+.quarantine/
+logs/
+*.log
+.DS_Store
+legacy-python/.pytest_cache/
+legacy-python/**/__pycache__/

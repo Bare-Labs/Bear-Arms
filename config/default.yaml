@@ -1,0 +1,25 @@
+watch_paths:
+  - /tmp
+
+exclude_globs:
+  - "**/.git/**"
+  - "**/node_modules/**"
+  - "**/.venv/**"
+
+quarantine_dir: .quarantine
+audit_log_path: logs/audit.jsonl
+
+heuristics:
+  max_file_mb: 200
+
+indicators:
+  known_bad_hashes: []
+  suspicious_names:
+    - install_agent.sh
+    - postinstall
+    - launch_persistence.sh
+  suspicious_extensions:
+    - .dylib
+    - .so
+    - .elf
+    - .kext
