@@ -1,6 +1,7 @@
 mod analysis;
 mod config;
 mod harden;
+mod mcp_server;
 mod quarantine;
 mod rules;
 mod scanner;
@@ -62,9 +63,16 @@ enum Commands {
         #[arg(long)]
         strict: bool,
     },
+
+    /// Start the MCP server over stdio so agents can invoke all tools programmatically.
+    Serve {
+        #[arg(long, default_value = "config/default.yaml")]
+        config: PathBuf,
+    },
 }
 
-fn main() -> anyhow::Result<()> {
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
@@ -77,6 +85,7 @@ fn main() -> anyhow::Result<()> {
         Commands::Triage { output } => cmd_triage(output),
         Commands::Analyze { log } => cmd_analyze(log),
         Commands::Harden { strict } => cmd_harden(strict),
+        Commands::Serve { config } => mcp_server::serve(config).await,
     }
 }
 
