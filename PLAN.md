@@ -10,6 +10,14 @@ every capability is exposed as an MCP tool so that agents in the Bare Labs
 ecosystem (BearClaw, Ursa, and others) can invoke them autonomously alongside
 human operators.
 
+## Portfolio Alignment (Iteration 5)
+
+This section tracks only the Bear-Arms items assigned in `PORTFOLIO-PRIORITY.md`.
+
+- [x] Planning baseline (`README.md` + `PLAN.md`) present
+- [ ] Unified policy matrix convergence with Ursa/HoneyPot through BearClaw
+- [ ] Step-up approval and immutable audit envelope convergence with suite-wide controls
+
 ---
 
 ## Architecture
