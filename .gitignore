@@ -5,3 +5,13 @@ logs/
 .DS_Store
 legacy-python/.pytest_cache/
 legacy-python/**/__pycache__/
+
+
+# Agent Context
+changes/
+AGENTS.md
+PLAN.md
+CLAUDE.md
+.claude/worktrees/
+ROADMAP.md
+deploy/
