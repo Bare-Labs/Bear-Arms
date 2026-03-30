@@ -3,6 +3,10 @@ target/
 logs/
 *.log
 .DS_Store
+
+# Secrets — never commit
+.env
+*.env
 legacy-python/.pytest_cache/
 legacy-python/**/__pycache__/
 
